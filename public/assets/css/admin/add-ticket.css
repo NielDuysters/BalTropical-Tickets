@@ -1,0 +1,10 @@
+form {
+    max-width: 500px;
+}
+form > div {
+    background-color: #FAFAFA;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}

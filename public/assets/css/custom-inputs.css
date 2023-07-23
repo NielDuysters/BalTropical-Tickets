@@ -1,0 +1,215 @@
+.input-line {
+    width: 100%;
+    display: grid;
+    margin-bottom: 6px;
+}
+.input-line.half {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 6px;
+    align-items: center;
+}
+.input-line.no-grid { display: block; }
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 0;
+    background-color: #EEEEEE;
+    outline: 0;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #151515;
+    width: 100%;
+}
+input::placeholder {
+    color: #A4A4A4;
+}
+
+input.invalid,
+textarea.invalid {
+    border: solid 2px #FF0000;
+}
+
+.label {
+    font-size: 1.2em;
+}
+
+input[type="file"] {
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.input-line.date-input-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.date-input-wrapper .label {
+    padding-left: 10px;
+}
+.date-wrapper input[name="birthdate-day"] {
+    width: 60px;
+    text-align: center;
+}
+.date-wrapper input[name="birthdate-year"] {
+    width: 70px;
+    text-align: center;
+}
+
+.dropdown {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 0;
+    background-color: #EEEEEE;
+    outline: 0;
+    font-weight: 600;
+    width: 140px;
+    cursor: pointer;
+}
+.dropdown.invalid .selected {
+    border: solid 2px #FF0000;
+    padding: 10px;
+    font-size: 1.2em;
+}
+.dropdown.active .selected {
+    height: 100%;
+}
+.dropdown-arrow {
+    width: 16px;
+    float: right;
+    margin-top: 3px;
+}
+.dropdown .selected {
+    padding: 10px;
+    font-size: 1.2em;
+    color: #A4A4A4;
+    border-radius: 15px;
+}
+.dropdown.is-selected .selected {
+    color: #151515;
+}
+.dropdown .options {
+    display: flex;
+    flex-direction: column;
+    height: 0px;
+    overflow: hidden;
+    overflow-y: scroll;
+    transition: height 0.5s ease;
+    background-color: #EEEEEE;
+    position: absolute;
+    top: calc(100% + 5px);
+    border-radius: 15px;
+    z-index: 2;
+    width: calc(100% - 10px);
+    padding: 0 5px;
+    padding-bottom: 5px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.dropdown .options::-webkit-scrollbar {
+    width: 6px;
+}
+.dropdown .options::-webkit-scrollbar-track {
+    background: transparent;
+}
+.dropdown .options::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #A4A4A4;
+}
+.dropdown:not(.active) .options { display: none; }
+.dropdown .options span {
+    font-weight: 400;
+    padding: 5px 0;
+    padding-left: 4px;
+    cursor: pointer;
+}
+.dropdown .options span:hover {
+    font-weight: 600;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+.checkbox-wrapper input[type="checkbox"] {
+    display: none;
+}
+.checkbox-wrapper.center-label { align-items: center; }
+.checkbox {
+    width: 30px;
+    height: 25px;
+    border: solid 2px #A3A4A4;
+    position: relative;
+    display: inline-flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+.checkbox-small {
+    width: 15px;
+    height: 15px;
+}
+.checkbox[data-selected="true"] img {
+    opacity: 1;
+}
+.checkbox img {
+    width: 130%;
+    height: 130%;
+    margin-left: 10px;
+    opacity: 0;
+}
+.checkbox.checkbox-small img {
+    margin-left: 2px;
+}
+.checkbox-label {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.button {
+    padding: 8px 10px;
+    border-radius: 15px;
+    font-weight: 600;
+    background-color: #D8D8D8;
+    display: inline-flex;
+    cursor: pointer;
+    justify-content: space-around;
+    align-items: center;
+    gap: 7px;
+    outline: 0;
+    border: 0;
+    font-size: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+.button.next,
+.button.save-changes {
+    background-color: #FF3A00;
+    color: #FFFFFF;
+}
+.button.danger {
+    color: #FFFFFF;
+    background-color: #FF0000;
+}
+.button.ok {
+    color: #151515;
+    text-decoration: none;
+}
+.button img {
+    width: 25px;
+}
+.button.danger img {
+    width: 18px;
+}

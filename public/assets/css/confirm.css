@@ -1,0 +1,52 @@
+.screen#confirm {
+    background-color: transparent;
+    padding: 0;
+}
+#screen-container.confirm-screen-is-active {
+    background-color: transparent;
+    max-height: none;
+}
+
+.screen#confirm .confirm-top {
+    background-color: #FAFAFA;
+    padding: 25px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#ticket-confirmation-list {
+    margin-top: 25px;
+}
+.ticket-confirmation-list-item {
+    display: flex;
+    background-color: #FAFAFA;
+    padding: 15px 25px;
+    border-radius: 15px;
+    margin: 8px 0;
+    color: #848484;
+    font-weight: 500;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    position: relative;
+}
+.ticket-confirmation-list-item-name {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.ticket-confirmation-list-item-info .label {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.screen#confirm .screen-buttons-container {
+    position: relative;
+    top: auto;
+    left: auto;
+    background-color: #FAFAFA;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 50px;
+}

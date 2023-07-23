@@ -1,0 +1,50 @@
+#admin-list {
+    max-width: 350px;
+}
+
+.admin-list-item {
+    display: flex;
+    background-color: #E6E6E6;
+    padding: 15px 25px;
+    border-radius: 15px;
+    margin: 8px 0;
+    color: #848484;
+    font-weight: 500;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.admin-list-item .name {
+    font-weight: 700;
+}
+
+.admin-buttons {
+    background-color: #EEEEEE;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: inline-flex;
+    gap: 12px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.admin-button {
+    width: 20px;
+}
+
+form {
+    max-width: 500px;
+    background-color: #FAFAFA;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+form .button {
+    margin-top: 10px;
+}
+
+form .label {
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: block;
+}

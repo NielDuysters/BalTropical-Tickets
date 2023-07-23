@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #151515;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 15px;
+}
+
+#container {
+    width: 80%;
+    margin: auto;
+    margin-top: 2.5%;
+    max-width: 450px;
+}
+
+#logo {
+    width: 80%;
+    margin: 10px;
+    margin-left: 10%;
+}
+#print-logo {
+    font-size: 2em;
+    font-weight: 600;
+    margin: 15px 0;
+    text-align: center;
+    display: none;
+}
+#ticket {
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 25px;
+}
+#user-info span {
+    display: block;
+}
+#user-info #name {
+    font-size: 2em;
+}
+#user-info #birthdate {
+    font-size: 1.3em;
+}
+
+#qr-code {
+    margin: 25px auto;
+}
+
+#rules {
+    text-align: center;
+    font-size: 1.2em;
+    color: #FFFFFF;
+    margin: 25px 0;
+    box-sizing: border-box;
+    padding: 0 2.5%;
+}
+#rules span {
+    display: block;
+}
+#rules span.title {
+    font-size: 1.2em;
+}
+
+#print-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#print-button img {
+    width: 32px;
+}
+
+#hellofood-popup {
+    width: 95%;
+    height: 95%;
+    max-width: 550px;
+    max-height: 350px;
+    background-color: #FFFFFF;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+#hellofood-popup.visible {
+    opacity: 1;
+}
+#hellofood-print-text {
+    max-width: 500px;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    display: none;
+}
+#hellofood-popup-close-button {
+    color: #A4A4A4;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+#hellofood-popup p {
+    font-size: 1.2em;
+}
+#hellofood-popup img,
+#hellofood-print-text img {
+    width: 200px;
+}
+#hellofood-popup .promocode,
+#hellofood-print-text .promocode  {
+    padding: 15px;
+    background-color: #D8D8D8;
+    font-weight: 700;
+    border-radius: 15px;
+    display: inline-block;
+}
+#hellofood-popup .button {
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+#popup-background {
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: none;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+#popup-background.visible { opacity: 0.6; }
+
+@media print {
+    #ticket {
+        border: solid 2px #000000;
+    }
+    #logo {
+        display: none;
+    }
+    #print-logo {
+        display: block;
+    }
+    #rules {
+        color: #000000;
+    }
+    #print-button {
+        display: none;
+    }
+    #hellofood-print-text {
+        display: block;
+    }
+}

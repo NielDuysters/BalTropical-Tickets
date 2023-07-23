@@ -1,0 +1,13 @@
+{
+  "display": "standalone",
+  "scope": "/scanner",
+  "start_url": "/scanner",
+  "name": "Bal Tropical Scanner",
+  "short_name": "Scanner",
+  "icons": [
+    {
+      "src": "/assets/media/images/scanner/logo.png",
+      "sizes": "16x16"
+    }
+  ]
+}

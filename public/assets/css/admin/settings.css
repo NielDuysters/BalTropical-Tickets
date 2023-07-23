@@ -1,0 +1,42 @@
+#dashboard {
+    padding-top: 50px;
+}
+
+form {
+    max-width: 500px;
+    background-color: #FAFAFA;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+form .input-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width: 200px;
+}
+form input[type="text"] {
+    font-size: 1em;
+}
+
+form .input-line.pin-input {
+    max-width: 350px;
+}
+form .input-line.pin-input input {
+    width: 85px;
+}
+
+
+.amount-wrapper .input-icon {
+    font-size: 1.2em;
+    top: 50%;
+}
+.amount-wrapper input[type="text"] {
+    padding-left: 25px;
+}

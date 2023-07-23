@@ -1,0 +1,250 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+#dashboard-title {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 50px;
+    display: block;
+}
+
+nav#dashboard-nav {
+    width: 320px;
+    height: 100%;
+    background-color: #E6E6E6;
+    padding: 50px;
+    box-sizing: border-box;
+}
+nav#dashboard-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    margin-left: -15px;
+}
+nav#dashboard-nav ul li {
+    margin-bottom: 50px;
+}
+nav#dashboard-nav ul li a {
+    color: #848484;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.3em;
+    font-weight: 600;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+nav#dashboard-nav ul li a.active,
+nav#dashboard-nav ul li a:hover {
+    background-color: #D8D8D8;
+}
+nav#dashboard-nav ul li img {
+    width: 35px;
+}
+
+#dashboard {
+    width: calc(100% - 320px);
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 50px;
+    padding-top: 115px;
+    overflow-y: scroll;
+}
+
+nav#top-nav {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-left: -50px;
+    padding: 0 50px;
+    background-color: #F2F2F2;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+nav#top-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+nav#top-nav ul li {
+    float: left;
+    margin-right: 25px;
+    font-weight: 600;
+}
+nav#top-nav ul li a {
+    color: #151515;
+    text-decoration: none;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+nav#top-nav ul li a.active {
+    background-color: #D8D8D8;
+}
+nav#top-nav ul li a img {
+    width: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+thead th:not(:last-child) {
+
+}
+thead th {
+    background-color: #F5F3F3;
+    text-align: left;
+}
+thead th:first-child { border-top-left-radius: 15px; }
+thead th:last-child { border-top-right-radius: 15px; }
+
+tbody td {
+    border-bottom: solid 1px #F5F3F3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 0.95em;
+    position: relative;
+}
+tbody tr {
+    border-left: solid 1px #F5F3F3;
+    border-right: solid 1px #F5F3F3;
+    cursor: pointer;
+}
+tbody tr:hover {
+    background-color: #F2F2F2;
+}
+
+tbody {
+    color: #565F68;
+    height: 100%;
+}
+
+td,
+th {
+    padding: 5px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+table .status {
+    padding: 7px;
+    border-radius: 15px;
+    background-color: #848484;
+    color: #FFFFFF;
+    display: inline;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+table .status.paid {
+    background-color: #04B404;
+}
+table .status.expired {
+    background-color: #DF7401;
+}
+table .status.unpaid,
+table .status.refundfail {
+    background-color: #FF0000;
+}
+table .status.refunded {
+    background-color: #2E64FE;
+}
+table .status.refunding {
+    background-color: #47D6DF;
+}
+table .status.manual {
+    background-color: #04B404;
+}
+
+table .actions {
+    background-color: #EEEEEE;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: inline-flex;
+    gap: 12px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+table .actions img {
+    width: 25px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+#filter {
+    width: 100%;
+    background-color: #F5F3F3;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#filter form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+#filter input[type='text'] {
+    width: auto;
+    display: inline-block;
+    font-size: 1em;
+    background-color: #FFFFFF;
+}
+#filter .dropdown {
+    width: 150px;
+    background-color: #FFFFFF;
+}
+#filter .dropdown .options {
+    background-color: #FFFFFF;
+    border: solid 1px #A4A4A4;
+}
+#filter .dropdown .selected {
+    font-size: 1em;
+}
+
+.amount-wrapper {
+    position: relative;
+}
+.amount-wrapper input[type="text"] {
+    padding-left: 30px;
+}
+.amount-wrapper .input-icon {
+    font-size: 2.7em;
+    color: #848484;
+    position: absolute;
+    left: 5px;
+    top: 45%;
+    transform: translate(0, -50%);
+}
+
+.error {
+    color: #FF0000;
+    margin: 20px 0;
+    display: block;
+}

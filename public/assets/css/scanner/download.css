@@ -1,0 +1,94 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #151515;
+    text-align: center;
+    padding-top: 15%;
+}
+
+#download-buttons {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+#download-buttons img {
+    width: 135px;
+    padding: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 15px;
+}
+
+#title {
+    display: block;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#continue {
+    color: #FF3A00;
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+#install-pwa-container > div {
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding: 25px;
+    width: 95%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    position: fixed;
+    left: 2.5%;
+    display: none;
+    opacity: 0;
+    z-index: 5;
+}
+#install-pwa-container > div.visible {
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+#install-pwa-container #install-pwa-ios {
+    bottom: 2.5%;
+}
+#install-pwa-container #install-pwa-android {
+    top: 2.5%;
+}
+#install-pwa-container > div .close-install-popup {
+    color: #A4A4A4;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 1.6em;
+}
+#install-pwa-container img {
+    width: 25px;
+    position: relative;
+    top: 5px;
+}
+#popup-background {
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: none;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+#popup-background.visible { opacity: 0.6; }
+
+@media screen and (display-mode: standalone) {
+    html {
+         min-height: calc(100% + 50px);
+    }
+}

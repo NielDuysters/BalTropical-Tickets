@@ -1,0 +1,48 @@
+.accordion-toggle {
+  display: block;
+  padding: 15px;
+  background-color: #EEEEEE;
+  border-radius: 15px;
+  margin-top: 10px;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #151515;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+}
+.accordion-toggle:hover { text-decoration: none; }
+.accordion-toggle:first-child {
+    margin-top: 0;
+}
+.accordion-content {
+  display: block;
+  max-height: 0;
+  transition: max-height 1s ease-out;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.accordion-content.active {
+  max-height: 500px;
+}
+.screen-content {
+    max-height: 300px;
+    overflow-y: scroll;
+    margin-top: 25px;
+    padding-top: 0;
+    padding-right: 25px;
+}
+.screen-content::-webkit-scrollbar {
+    width: 6px;
+}
+.screen-content::-webkit-scrollbar-track {
+    background: #A4A4A4;
+}
+.screen-content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #FF3A00;
+}
+.screen {
+    padding-right: 2px;
+}

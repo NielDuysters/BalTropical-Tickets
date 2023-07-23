@@ -1,0 +1,12 @@
+#dashboard {
+    padding: 0;
+}
+#logs {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    font-size: 0.9em;
+    padding: 25px;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+}
