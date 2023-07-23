@@ -8,6 +8,7 @@ use Mollie\Laravel\Facades\Mollie;
 use App\Models\Ticket;
 use DB;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class TicketSupportController extends Controller
 {
@@ -30,13 +31,14 @@ class TicketSupportController extends Controller
 
     public function contact(Request $req) {
         $file = $req->file('file');
-        $file_name = "betaalbewijs-" . rand(1000, 100000) . "." . $file->getExtension();
-        $file->storeAs('ticket-support/', $file_name, "public");
+        $file_name = "betaalbewijs-" . rand(1000, 100000) . "." . $file->extension();
+        $x = $file->storeAs('ticket-support', $file_name);
+		Log::info("x" . $x);
 
         $mail_body = $req->get("name") . " (" . $req->get("email") . ") meld het volgende probleem: <p>" . $req->get("description") . "</p>--------------------------------";
-        send_mail(env("HELP_EMAIL_ADDRESS"), env("HELP_EMAIL_ADDRESS"), $req->get("email"), "Probleem met ticket van " . $req->get("name"), $mail_body, "storage/ticket-support/" . $file_name);
+        send_mail(env("HELP_EMAIL_ADDRESS"), env("HELP_EMAIL_ADDRESS"), $req->get("email"), "Probleem met ticket van " . $req->get("name"), $mail_body, Storage::path("ticket-support/" . $file_name));
 
-        File::delete("storage/ticket-support/" . $file_name);
+        File::delete(Storage::path("ticket-support/" . $file_name));
         return;
     }
 }
