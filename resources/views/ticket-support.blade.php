@@ -183,7 +183,7 @@
                             </div>
                             <div class="input-line no-grid">
                                 <span class="label">Betaalbewijs: </span>
-                                <input type="file" name="file" accept="image/jpg, image/png, application/pdf" required>
+                                <input type="file" name="file" accept="image/jpeg, image/png, application/pdf" required>
                             </div>
 
                             <span class="error"><strong>Foutmelding: </strong>Niet alle velden zijn correct ingevuld.</span>
