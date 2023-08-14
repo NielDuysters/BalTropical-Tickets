@@ -6,7 +6,7 @@ Een eenvoudig ticketsysteem voor BalTropical.be. Gemaakt door Niel Duysters (con
 - Mogelijkheid om meerdere tickets te bestellen.
 - Input-validatie.
 - Betalen via Mollie (Bancontact).
-- URL met ticker wordt verzonden per mail.
+- URL met ticket wordt verzonden per mail.
 - Mobiel.
 
 ## Hulp bij tickets
